@@ -44,7 +44,6 @@ def process_image(filename):
     image_matrix = threshold_image(image_matrix, 0.1)
     image_matrix = eliminate_whitespace(image_matrix)
     image_matrix = resize_image(image_matrix)
-
     return flatten_matrix(image_matrix)
 
 
