@@ -2,7 +2,7 @@ import tkinter
 import matplotlib.pyplot as plt
 from ctypes import windll
 from PIL import ImageGrab
-from display_image import display_image_from_vector
+# from display_image import display_image_from_vector
 from predict import make_prediction
 from process_image import process_image
 
@@ -110,5 +110,5 @@ class DrawingWindow:
 if __name__ == '__main__':
     user32 = windll.user32
     user32.SetProcessDPIAware()
-    x = DrawingWindow()
-    x.run()
+    window = DrawingWindow()
+    window.run()
