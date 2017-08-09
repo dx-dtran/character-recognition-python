@@ -1,4 +1,4 @@
-# Character Recognition in Python
+# Character Recognition
 
 ## Introduction
 
