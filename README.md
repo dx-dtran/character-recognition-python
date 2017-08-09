@@ -4,9 +4,17 @@
 
 This is an optical character recognition project written in Python using the NumPy, Matplotlib, and PIL libraries. Users draw a lowercase character into a GUI and an artificial neural network predicts what letter it is.
 
+<p align="center">
+<img src="https://github.com/dx-dtran/character-recognition-python/blob/master/images/example1.PNG" height="300"/>
+<img src="https://github.com/dx-dtran/character-recognition-python/blob/master/images/example2.PNG" height="300"/>
+<br>Correct predictions of two variations of 'k'
+</p>
+
+
+
 ## Table of Contents
 1. [Dependencies and Installation](#dependencies-and-installation)
-2. [Notes to the User](#warnings)
+2. [Notes to the User](#notes-to-the-user)
 3. [How It Works](#how-it-works)
 4. [Known Issues](#known-issues)
 
