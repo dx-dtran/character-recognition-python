@@ -12,9 +12,10 @@ This is an optical character recognition project written in Python using the Num
 
 ## Table of Contents
 1. [Dependencies and Installation](#dependencies-and-installation)
-2. [Notes to the User](#notes-to-the-user)
+2. [Limitations](#limitations)
 3. [How It Works](#how-it-works)
     * [Making the dataset](#making-the-dataset)
+    * [Creating the GUI](#creating-the-gui)
     * [Neural Networks](#the-neural-network)
 4. [Known Issues](#known-issues)
 
@@ -31,7 +32,7 @@ $ git clone https://github.com/dx-dtran/character-recognition-python.git
 
 Before running the scripts, make sure the custom Anaconda Python 3.6.1 interpreter is being used in your environment. For example, if you are opening the .py files in the PyCharm IDE, select Anaconda Python 3.6.1 from the list of interpreters. All import statements made in the scripts will now be recognized by the interpreter.
 
-## Notes to the User
+## Limitations
 
 A tkinter.Canvas widget is used for letter drawing. Drawings from the Canvas need to be outputted to a .png file for the neural network to process the image data and predict a letter. Right now, the tkinter.Canvas widget's image file is obtained using a screenshot of the widget. Screenshots are done using the PIL library's ImageGrab function, which is currently only available for Windows. 
 
@@ -59,7 +60,13 @@ Each of the rows in the dataset has been obtained by processing pictures of lett
 1. Removes any whitespace surrounding the letter
 2. Resizes image down to a square, 30 by 30 pixel image
 3. Performs binary-thresholding so the image’s pixel intensity/color data is reduced to 1’s and 0’s: 1 for black, 0 for white
-4. Flattens the image into a 1 by 900 vector. The first 30 elements represent the first row of the image’s pixels, the next 30 represent the second row, etc. 
+4. Flattens the image into a 1 by 900 vector. The first 30 elements represent the first row of the image’s pixels, the next 30 represent the second row, etc.
+
+### Creating the GUI
+
+The letter drawing window contains four main main elements: a tkinter.Canvas object for drawing, and three tkinter.Button objects for predicting a letter, showing prediction data, and clearing the Canvas. 
+
+The Canvas object tracks the user's cursor movements. When the user clicks and drags the cursor, a series of circles are drawn in the cursor's path. When the user submits the drawing for character recognition, the script takes a screenshot of the Canvas and saves it to a file.
 
 ### The Neural Network
 
