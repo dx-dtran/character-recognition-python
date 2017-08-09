@@ -49,13 +49,13 @@ Creating this project required four main steps:
 
 ### Making the dataset
 
-The training dataset currently contains 3600 examples of lowercase letters. It is called 'characterDataset.txt' and can be found in the data directory of this repository.
+The training dataset currently contains 3600 examples of lowercase letters. It is called [characterDataset.txt](https://github.com/dx-dtran/character-recognition-python/blob/master/data/characterDataset.txt) and can be found in the data directory of this repository.
 
 2600 examples come from screenshots of 100 different Microsoft Word fonts (100 fonts per letter). The remaining 1000 examples are handwritten submissions from four people.
 
 Each row in the dataset represents an example of a letter. The first 900 elements of each row are the pixel color values (1 for black, 0 for white) of a 30x30 image of a letter. The last 26 elements of each row represent a letter-classification vector, where the index of the number 1 is the index of the image's associated letter.
 
-Each of the rows in the dataset has been obtained by processing pictures of letters through the 'process_image.py' script. The script performs the following computations:
+Each of the rows in the dataset has been obtained by processing pictures of letters through the [process_image.py](https://github.com/dx-dtran/character-recognition-python/blob/master/process_image.py) script. The script performs the following computations:
 1. Removes any whitespace surrounding the letter
 2. Resizes image down to a square, 30 by 30 pixel image
 3. Performs binary-thresholding so the image’s pixel intensity/color data is reduced to 1’s and 0’s: 1 for black, 0 for white
@@ -69,6 +69,6 @@ To predict a character from an image, the neural network essentially takes a 1 b
 
 To learn characters from a dataset, the neural network must determine the values of the two transformation matrices described above. This is done using the backpropagation and gradient descent algorithms. What this essentially boils down to is finding matrix values that minimize the difference between each image's pixel vector and its corresponding letter vector.
 
-These backpropagation and gradient descent computations have been done in a separate MATLAB script not included in this repository. Instead, only the final matrix data is included and is stored in 'weights1.txt' and 'weights2.txt'.
+These backpropagation and gradient descent computations have been done in a separate MATLAB script not included in this repository. Instead, only the final matrix data is included and is stored in [weights1.txt](https://github.com/dx-dtran/character-recognition-python/blob/master/weights1.txt) and [weights2.txt](https://github.com/dx-dtran/character-recognition-python/blob/master/weights2.txt).
 
 ## Known Issues
