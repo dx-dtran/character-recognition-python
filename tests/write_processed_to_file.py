@@ -1,5 +1,4 @@
-import process_image
-
+from src import process_image
 
 if __name__ == '__main__':
     image = process_image.process_image('..\\l.png')
