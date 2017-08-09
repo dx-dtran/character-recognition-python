@@ -79,3 +79,5 @@ To learn characters from a dataset, the neural network must determine the values
 These backpropagation and gradient descent computations have been done in a separate MATLAB script not included in this repository. Instead, only the final matrix data is included and is stored in [weights1.txt](https://github.com/dx-dtran/character-recognition-python/blob/master/weights1.txt) and [weights2.txt](https://github.com/dx-dtran/character-recognition-python/blob/master/weights2.txt).
 
 ## Known Issues
+
+1. Script raises an exception if user submits an empty drawing
