@@ -34,7 +34,7 @@ def display_all_images(path):
 
 
 def main():
-    display_all_images('.\\data\\letter.txt')
+    display_all_images('..\\data\\2 letters.txt')
 
 
 if __name__ == '__main__':

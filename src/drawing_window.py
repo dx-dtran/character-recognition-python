@@ -1,10 +1,12 @@
 import tkinter
-import matplotlib.pyplot as plt
 from ctypes import windll
+
+import matplotlib.pyplot as plt
 from PIL import ImageGrab
 from display_image import display_image_from_vector
 from predict import make_prediction
-from process_image import process_image
+
+from src.process_image import process_image
 
 
 class DrawingWindow:

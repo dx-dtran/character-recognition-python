@@ -1,6 +1,6 @@
 import numpy as np
 
-from logistic_function import logistic_function
+from src.logistic_function import logistic_function
 
 
 def load_weights(filename):
